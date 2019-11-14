@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+</head>
+<body>
+	<header>
+		<h4>Todo List</h4>
+		<a href="/add/">Add Todo </a>
+		<hr>
+	</header>
+	{% for todo in todos %}
+	<ul>
+		<li>
+			<a href="/details/{{todo.id }}"> {{ todo.title }}</a>{{ todo.text }}
+		</li>
+	</ul>
+		
+	{% endfor %}
+</body>
+</html>
